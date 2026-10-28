@@ -23,4 +23,7 @@ jobs:
           cache: maven
 
       - name: Compile and run tests
-        run: mvn -B clean verify
+        run: mvn clean package
+
+      - name: Run java jar
+        run: java -jar target/java-maven-demo-1.0.0.jar
